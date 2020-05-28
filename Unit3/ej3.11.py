@@ -55,7 +55,7 @@ def test_trapezint():
   """test trapezoidal rule which is exact for integral cos x dx from zero to 2*pi, up to 199 trapezoids. """
   for n in range(2,200): #warning! The result isn't correct for n=1
    msg="Test fails for n=%g" %n
-   assert (trapezint(cos, 0, 2*pi, n) < 1e-14), msg #exact value=0
+   assert (abs(trapezint(cos, 0, 2*pi, n)) < 1e-14), msg #exact value=0
 
 test_trapezint()
 
