@@ -110,7 +110,7 @@ class Heun(ODESolver):
 class Leapfrog(ODESolver):
     def advance(self):
         u, f, k, t = self.u, self.f, self.k, self.t
-        if k==0: #need to use a different method, e.g., FordwardEuler
+        if k==0: #need to use a different method, e.g., ForwardEuler
             dt = t[k+1] - t[k]
             u_new = u[k] + dt*f(u[k], t[k])            
         else:    
